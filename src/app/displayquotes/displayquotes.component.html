@@ -1,0 +1,14 @@
+<p class="quote-title">List of Quotes!</p>
+
+<div class="quote-container">
+  <div *ngFor="let quote of quotes"
+       class="quote-card"
+       [ngClass]="{ 'isHenriMatisse': quote.isHenriMatisse }">
+    <p class="quote-content">Title: {{quote.title}}</p>
+    <ul class="quote-details">
+      <li>“{{quote.quotes}}”</li>
+      <li><span>Author:</span> {{quote.author}}</li>
+      <li><span>Published:</span> {{quote.published}}</li>
+    </ul>
+  </div>
+</div>
