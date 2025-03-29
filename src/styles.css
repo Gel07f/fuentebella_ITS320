@@ -1,44 +1,43 @@
 @import "tailwindcss";
 
-@layer components {
-  .quote-title {
-    @apply text-2xl md:text-3xl font-bold text-center text-blue-700 mb-6 tracking-wide;
-  }
+.quotes-title {
+  @apply text-2xl md:text-3xl font-bold text-center text-blue-700 mb-6 tracking-wide;
+}
 
-  .quote-container {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-auto max-w-6xl;
-  }
+.quotes-container {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-auto max-w-6xl;
+}
 
-  .quote-card {
-    @apply shadow-lg rounded-xl p-4 sm:p-6 bg-pink-100 border border-pink-300 hover:shadow-2xl transition-all duration-300 transform hover:scale-105;
-  }
+.quote-card {
+  @apply shadow-lg rounded-xl p-4 sm:p-6 bg-pink-100 border border-pink-300 hover:shadow-2xl transition-all duration-300 transform hover:scale-105;
 
-  .quote-card.isHenriMatisse {
+  &.henri-matisse {
     @apply bg-gradient-to-r from-sky-200 to-blue-300 hover:from-blue-300 hover:to-sky-400;
   }
 
-  .quote-content p {
+  .quote-title {
     @apply text-lg md:text-xl font-semibold text-gray-700 text-center mb-2;
   }
 
   .quote-details {
     @apply space-y-1 text-gray-800;
-  }
 
-  .quote-details li {
-    @apply font-medium text-gray-900;
-  }
+    .quote-text {
+      @apply font-medium text-gray-900;
+    }
 
-  .quote-details li span {
-    @apply font-semibold;
-  }
+    .quote-author {
+      @apply text-gray-700;
+      span {
+        @apply font-semibold;
+      }
+    }
 
-  .quote-details li:nth-child(2) {
-    @apply text-gray-700;
-  }
-
-  .quote-details li:nth-child(3) {
-    @apply text-gray-600;
+    .quote-published {
+      @apply text-gray-600;
+      span {
+        @apply font-semibold;
+      }
+    }
   }
 }
-
