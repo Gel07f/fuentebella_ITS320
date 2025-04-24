@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { myportfolioComponent } from './myportfolio/myportfolio.component';
-import { DisplayquotesComponent } from './displayquotes/displayquotes.component';
-import { TodolistComponent } from './todo-list/todo-list.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [ RouterOutlet, myportfolioComponent, DisplayquotesComponent, TodolistComponent],
+  standalone: true,
+  imports: [
+    TodoListComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ITS320frontend-fuentebella';
